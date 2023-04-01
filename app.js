@@ -28,7 +28,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect('mongodb+srv://029aman:aman12345678@cluster0.ttt8in4.mongodb.net/?retryWrites=true&w=majority/yelp-camp', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
