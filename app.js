@@ -99,10 +99,11 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-app.listen(3003, () => {
-    // console.log(`Server On PORT 3000`);
-    var date = new Date();
-    console.log(`Time :- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
-})
+module.exports = app;
+// app.listen(3003, () => {
+//     // console.log(`Server On PORT 3000`);
+//     var date = new Date();
+//     console.log(`Time :- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+// })
 
 
