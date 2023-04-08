@@ -28,7 +28,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb+srv://029aman:aman12345678@cluster0.ttt8in4.mongodb.net/?retryWrites=true&w=majority/yelp-camp', {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -99,11 +99,10 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-module.exports = app;
-// app.listen(3003, () => {
-//     // console.log(`Server On PORT 3000`);
-//     var date = new Date();
-//     console.log(`Time :- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
-// })
+app.listen(3003, () => {
+    // console.log(`Server On PORT 3000`);
+    var date = new Date();
+    console.log(`Time :- ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+})
 
 
