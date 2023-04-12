@@ -28,7 +28,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect("mongodb+srv://029aman:aman12345678@cluster0.ttt8in4.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
